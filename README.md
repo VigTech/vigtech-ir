@@ -54,6 +54,6 @@ El ConvertisorTxt utiliza la dependencia:
 Crea un índce con el id del proyecto e indexa los documentos contenidos en la ruta del proyecto contenida en el repositorio de archivos.
 ###GET "/vigtech-ir/&lt;project_id&gt;"
 Devuelve la información del índice correspondiente al id del proyecto
-###GET "/vigtech-ir/&lt;project_id&gt;/search?query=&lt;consulta_al_indice&gt"
+###GET "/vigtech-ir/&lt;project_id&gt;/search?query=&lt;consulta_al_indice&gt;"
 Devuelve los resultados de la consulta pasada como parámetro al ser ejecutada sobre el índice correspondiente al id del proyecto
 
