@@ -87,6 +87,25 @@ public class IndexerApi {
        return index;
     }
     
+    
+    @Path("{index_id}")
+    @POST
+    public Index createIndex(@PathParam("index_id") String path) {
+
+       String repoPath = PropertiesManager.getInstance().getProperty("repository.path");
+       String indexPath = PropertiesManager.getInstance().getProperty("index.path");
+           
+       String indexFilePath = indexPath + path;
+       File indexDir = new File(indexFilePath);
+       if(!indexDir.exists())
+    	   indexDir.mkdir();
+       Indexer indexer =  new Indexer();
+       Index index = indexer.indexar(indexPath + path, repoPath + path);
+       
+       
+       return index;
+    }
+    
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
     public Index updateIndex(@PathParam("id") String id) {
