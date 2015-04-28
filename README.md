@@ -50,7 +50,7 @@ El ConvertisorTxt utiliza la dependencia:
 - tika-app-1.6
 
 ##API
-###POST "/vigtech-ir/<project_id>"
+###POST "/vigtech-ir/&lt;project_id&lt;"
 Crea un índce con el id del proyecto e indexa los documentos contenidos en la ruta del proyecto contenida en el repositorio de archivos.
 ###GET "/vigtech-ir/<project_id>"
 Devuelve la información del índice correspondiente al id del proyecto
