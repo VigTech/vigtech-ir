@@ -175,7 +175,11 @@ public class Indexer {
                             //contenida dentro del archivo. Se utiliza el lector
                             //de archivos apache tika.
                             String texto = TikaDocReader(docFiles[i]);
-                            if (texto != null) {
+                            
+                            String fileName = docFiles[i].getName().toLowerCase();
+                            if (texto != null && !fileName.endsWith(".xml")
+                            		&& !fileName.contentEquals("docs.txt")
+                            		&& !fileName.endsWith(".json")) {
 
                                 //Si el archivo contiene informacion se añade la
                                 //informacion una instancia de documento de
